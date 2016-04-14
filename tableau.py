@@ -27,7 +27,6 @@ inputQueen = (2,2)
 def solver(queenCoord, allQueensCoordinates):
     queen = Queen(queenCoord[0], queenCoord[1])
     queenArray = [Queen(coord[0], coord[1]) for coord in allQueensCoordinates]
-    count = 0
 
     return sum([1 for q in queenArray if queenComparison(queen, q)])
 
