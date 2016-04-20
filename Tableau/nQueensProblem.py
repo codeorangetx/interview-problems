@@ -13,7 +13,6 @@ class Queen:
         self.left_to_bot_diag = _x + _y
     def __str__(self):
         return str(self.x) + " " + str(self.y)
-        
 
 def queenComparison(q1, q2):
     return (q1.x == q2.x or q1.y == q2.y
