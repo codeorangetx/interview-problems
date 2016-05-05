@@ -1,10 +1,13 @@
 """
+This question was asked by OpenDoor. 
+
 Using the Markov chain below, write a function to simulate a variable length random walk.
 
-'a' -> 'a' -> 'a' -> 'b' -> 'b' -> 'b'
+Example: 'a' -> 'a' -> 'a' -> 'b' -> 'b' -> 'b'
 """
 
 
+# Markov Chain
 
 trans_probs = [
 ('a','a',0.9),
@@ -32,7 +35,7 @@ def random_walk (steps) :
             c = max(v[1] for v in prob_dict[current].values())
             prob_dict[current][next_state] =  (c, c + prob)
 
-    current_state = 'a'
+    current_state = steps[0][0]
     steps_taken = []
 
     for step in xrange(steps):
